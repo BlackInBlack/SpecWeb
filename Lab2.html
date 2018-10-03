@@ -3,13 +3,28 @@
 <head>
     <title>Быстрый старт. Размещение интерактивной карты на странице</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-    </script>
+
     <script type="text/javascript">
-     
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.vk.com/method/users.get?user_id=137454099&&access_token=d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f&fields=bdate&v=5.85', true);
+        xhr.send();
+        xhr.onerror = function () {
+            //alert("error");
+        }
+        if (xhr.status != 200) {
+            alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+        } else {
+            console.log(xhr.response);
+        }
+        alert(xhr.response);
+
+        
     </script>
 </head>
 <body>
-    https://oauth.vk.com/authorize?client_id=5490057&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.52
+    <div class="123" id="321"></div>
+        <!-- d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f
+        https://api.vk.com/method/users.get?user_id=210700286&access_token=d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f&v=5.52 -->
+
 </body>
 </html>
