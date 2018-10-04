@@ -4,27 +4,48 @@
     <title>Быстрый старт. Размещение интерактивной карты на странице</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <script type="text/javascript">
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://api.vk.com/method/users.get?user_id=137454099&&access_token=d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f&fields=bdate&v=5.85', true);
-        xhr.send();
-        xhr.onerror = function () {
-            //alert("error");
-        }
-        if (xhr.status != 200) {
-            alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
-        } else {
-            console.log(xhr.response);
-        }
-        alert(xhr.response);
-
-        
-    </script>
+    
 </head>
 <body>
-    <div class="123" id="321"></div>
-        <!-- d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f
-        https://api.vk.com/method/users.get?user_id=210700286&access_token=d8016b49dca0259a809ebd9e05619898c0ef53a8a344c861618ad32de56632c2aa3c3c3707e74ea7f124f&v=5.52 -->
+    <div id="321"></div>
+        
 
 </body>
+
+<script type="text/javascript">
+
+    var script = document.createElement('SCRIPT');
+    var ids="";
+    var min = 100000000;
+    var max = 999999999;
+    var strIds="";
+    for (let i = 0; i < 5; i++) {
+             ids.concat(ids,Math.floor(Math.random() * (max - min + 1)) + min);
+             if(i == 0) {
+                strIds = (Math.floor(Math.random() * (max - min + 1)) + min).toString();
+             } else {
+                strIds = strIds + "," + (Math.floor(Math.random() * (max - min + 1)) + min).toString();
+             }
+             
+    }
+    //alert(strIds);
+    script.src = "https://api.vk.com/method/users.get?user_ids="+strIds+"&access_token=b77fc4a9b77fc4a9b77fc4a9fbb719a1b4bb77fb77fc4a9eccb307db9fa8bfad9e8bf76&fields=bdate&v=5.85&callback=callbackFunc"; 
+    document.getElementsByTagName("head")[0].appendChild(script); 
+    var block = document.getElementById("321");
+    var str="<table border='1'><tr><th>№</th><th>Имя</th><th>Фамилия</th><th>Дата рождения</th></tr>";
+    function callbackFunc(result) {
+        //alert(result.response[0].first_name);
+        for (let i = 0; i < result.response.length; i++) {
+            var k = i+1;
+            //alert(i+": Имя - "+ result.response[i].first_name + ", Фамилия - " + result.response[i].second_name + ", День рождения - "+result.response[i].bdate+". \n");
+            str = str +"<tr><td>"+ k+":</td> <td>"+ result.response[i].first_name + "</td><td>" + result.response[i].last_name + "</td> <td>"+result.response[i].bdate+"</td><tr>";    
+        }
+        str = str + "</table>"
+        block.innerHTML = str;
+        //alert(str);
+        
+    } 
+
+    </script>
+
 </html>
