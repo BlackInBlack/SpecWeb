@@ -66,7 +66,7 @@ var view = {
             for (var m in grafic) {
                 var xy = grafic[m];
                 var x = x0 + xy.x;
-                var y = (y0 + xy.y*(-1)-150);
+                var y = (y0 + xy.y*(-1)-150); 
             
                 if (1 == m) 
                     gr.moveTo(x, y); 
