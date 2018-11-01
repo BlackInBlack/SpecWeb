@@ -1,5 +1,6 @@
 var controller = {
-
+    cModel: model,
+    cView: view,
     handleButtonClick: function() {
         var el = document.getElementById("buttonShow");
         el.onclick = function(e) {
@@ -8,8 +9,8 @@ var controller = {
             model.setKandB(obj.k,obj.b);
             model.createGraficsPos();
             view.showMap();
-            view.showGrafic(model.returnGrafic(1),model.returnGraficsColors); 
-            view.showGrafic(model.returnGrafic(2),model.returnGraficsColors);
+            view.showGrafic(model.returnGrafic(1),model.returnGraficsColors(0)); 
+            view.showGrafic(model.returnGrafic(2),model.returnGraficsColors(1));
         };
         
     },
@@ -29,8 +30,11 @@ var controller = {
     },
 
     init: function() {
+        this.cModel = model;
+        this.cView = view;
         this.handleButtonClick();
         this.handleCheckboxClick();
+        this.cView.showMap();
     }
     
 

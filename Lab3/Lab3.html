@@ -3,7 +3,6 @@
 <head>
     <title>Быстрый старт. Размещение интерактивной карты на странице</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -15,11 +14,14 @@
             <p>График функции f2(y = kx^2+b)<input id="showF2" type="checkbox" checked="true"></p>
             <button id="buttonShow" type="button" style="margin:10px;">Построить</button>
         </div>
-        <canvas id="canvas2d" width=1000 height=700 ></canvas>
+        <div id="map">      
+        </div>
+        <canvas id="canvas2d"></canvas>
+        
     </div>
     
     <script src="js/model.js"></script>
-    <script src="js/view.js"></script>
+    <script src="js/view3.js"></script>
     <script src="js/controller.js"></script>
 </body>
 </html>

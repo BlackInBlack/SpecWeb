@@ -15,6 +15,9 @@ var view = {
 
     showMap: function () {
         var canvas = document.getElementById("canvas2d");
+        canvas.width= 1000;
+        canvas.height=700;
+        canvas.style.border = "1px solid green";
         this.context = canvas.getContext("2d");
         this.kInput = document.getElementById("kInput");
         this.bInput = document.getElementById("bInput");

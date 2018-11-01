@@ -1,10 +1,23 @@
 #canvas2d {
-    width: 1000px;
-    height: 700px;
-    border: 1px solid blueviolet;
-    
+
 }
 
 #main {
     text-align: center;
+}
+#map {
+    align-content: center;
+}
+.dot {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    
+}
+
+.svg {
+    position: absolute;
+    border: 1px solid black;
+    margin: auto;
 }

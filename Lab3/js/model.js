@@ -38,8 +38,8 @@ var model = {
         return this.grafics["g"+index];
     },
 
-    returnGraficsColors: function() {
-        return this.colors;
+    returnGraficsColors: function(index) {
+        return this.colors[index];
     },
 
     returnStartPost: function() {
