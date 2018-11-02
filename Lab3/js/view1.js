@@ -65,24 +65,33 @@ var view = {
         gr.closePath();
 
         var nr_color = 0;
+        var prev_x, prev_y;
         gr.beginPath();
             for (var m in grafic) {
                 var xy = grafic[m];
                 var x = x0 + xy.x;
                 var y = (y0 + xy.y*(-1)-150); 
-            
+                
                 if (1 == m) 
-                    gr.moveTo(x, y); 
-                else 
-                    gr.lineTo(x, y);
-            
-                gr.arc(x, y, 1, 0, 1 * Math.PI, false);
+                {
+                    gr.moveTo(x, y);
+                    prev_x = x;
+                    prev_y = y;
+                } 
+                else {
+                    gr.quadraticCurveTo(x, y,prev_x,prev_y);
+                }
+                    
+                prev_x = x;
+                prev_y = y;
+                //gr.arc(x, y, 1, 0, 1 * Math.PI, false);
             }
 
             gr.strokeStyle = color; //цвет линии
             nr_color++;	
-            gr.lineWidth = 1;//толщина линии		
+            gr.lineWidth = 2;//толщина линии		
             gr.stroke();
+            gr.lineCap = "round"; 
         
     }
 }
