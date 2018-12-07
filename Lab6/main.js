@@ -3,12 +3,10 @@ var canvas = document.getElementById('glCanvas');
 
 var gl = canvas.getContext('webgl');
 
-// Устанавливаем размеры canvas и вьюпорт у WebGL
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 gl.viewport(0, 0, window.innerWidth, window.innerHeight);
 
-// Инициализация шейдеров
 var vertexShader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(vertexShader, document.getElementById('vertexShader').text);
 gl.compileShader(vertexShader);
@@ -34,7 +32,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     console.log('Could not initialize shaders');
 }
 
-// Получим местоположение переменных в программе шейдеров
+
 var uCube = gl.getUniformLocation(program, 'u_cube');
 var uCamera = gl.getUniformLocation(program, 'u_camera');
 var aPosition = gl.getAttribLocation(program, 'a_position');
