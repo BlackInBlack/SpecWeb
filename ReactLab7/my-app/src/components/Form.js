@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../Form.css';
 import Button from './Button';
 import FormInfoItem from './FormInfoItem';
-import Header from './Header';
 
 class Form extends Component {
   state = {

@@ -1,9 +1,9 @@
 .Navigation {
   display: inline-block;
-  background-color: yellowgreen;
+  background: repeat;
+    background-image: url(img/dark-gray-grain-hexagons.png); /* Абсолютный путь к фоновому изображению background.png */
   color: tomato;
   width: 600px;
-  height: 1000px;
   float: left;
   margin: 40px;
 }

@@ -1,6 +1,8 @@
 .Form {
-    background-color:seagreen;
-    color: white;
+    background: repeat;
+    background-image: url(img/peachy-monodiag.png); /* Абсолютный путь к фоновому изображению background.png */
+    color: black;
+    font-style: initial;
     display: block;
     margin: 40px;
     border:1px solid black;

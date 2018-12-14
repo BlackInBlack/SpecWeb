@@ -1,5 +1,6 @@
 .Header {
   width: 100%;
   height: 100px;
-  background-color: aqua;
+  background: repeat;
+  background-image: url(img/white-circles.png);
 }

@@ -1,6 +1,6 @@
 .HeadItem {
   width: 250px;
-  height: 50px;
+  padding: 20px;
   background-color:darkred;
   color:white;
   display: inline-block;

@@ -1,9 +1,11 @@
 .NavItem {
     margin:20px;
-    height: 40px;
-    background-color: wheat;
+    padding: 20px;
+    background: repeat;
+  background-image: url(img/white-lucky-rings.png); /* Абсолютный путь к фоновому изображению background.png */
     color: slateblue;
     border:1px solid black;
     border-radius: 2px;
     text-align: center;
+    font-size: 22px;
 }
