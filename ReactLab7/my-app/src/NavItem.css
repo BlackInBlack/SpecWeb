@@ -1,0 +1,9 @@
+.NavItem {
+    margin:20px;
+    height: 40px;
+    background-color: wheat;
+    color: slateblue;
+    border:1px solid black;
+    border-radius: 2px;
+    text-align: center;
+}

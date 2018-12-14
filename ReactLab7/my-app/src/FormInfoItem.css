@@ -1,0 +1,6 @@
+.FormInfoItem {
+    background-color:red;
+    height: 50px;
+    border:1px solid black;
+    border-radius: 4px;
+}
