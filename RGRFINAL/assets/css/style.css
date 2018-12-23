@@ -1,0 +1,54 @@
+body {
+    background-color: coral;
+}
+
+#main {
+    text-align: center;
+}
+#map {
+    display: inline-block;
+
+    float: left;
+}
+.dot {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    
+}
+
+.svg {
+    position: absolute;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#inputs-all {
+    background-color: white;
+    margin: 180px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border:1px solid black;
+    float: left;
+    font-size: 25px;
+}
+
+#input-all input {
+    font-size: 20px;
+}
+
+.info {
+    margin: 90px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border:1px solid black;
+    float: left;
+    font-size: 25px;
+}
+.elem-info {
+    margin:10px;
+    font-size: 20px;
+}

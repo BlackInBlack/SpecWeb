@@ -3,6 +3,7 @@
   background: repeat;
     background-image: url(img/dark-gray-grain-hexagons.png); /* Абсолютный путь к фоновому изображению background.png */
   color: tomato;
+  border-radius: 10px;
   width: 600px;
   float: left;
   margin: 40px;

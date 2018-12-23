@@ -2,10 +2,11 @@
     margin:20px;
     padding: 20px;
     background: repeat;
-  background-image: url(img/white-lucky-rings.png); /* Абсолютный путь к фоновому изображению background.png */
+    background: white;
+  /* background-image: url(img/white-lucky-rings.png); Абсолютный путь к фоновому изображению background.png */
     color: slateblue;
     border:1px solid black;
-    border-radius: 2px;
+    border-radius: 20px;
     text-align: center;
     font-size: 22px;
 }
