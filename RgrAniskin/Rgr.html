@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Быстрый старт. Размещение интерактивной карты на странице</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="main">
+            <h1>Преломление света</h1>
+        <div id="inputs-all">
+            <form onsubmit="return false">
+                    <div class="elem-info">
+                            <label for="kInput">Введите плотсность среды n1: </label>
+                            <input id="kInput" type="text" title="n1" placeholder="Плотсность среды n1" required>
+                    </div>
+                    <div class="elem-info">
+                            <label for="bInput">Введите плотсность среды n2: </label>
+                            <input id="bInput" type="text" title="n2" placeholder="Плотсность среды n2" required>
+                    </div>
+                    <div class="elem-info">
+                            <label for="rangeBar">Задайте время суток: </label>
+                            <input id="rangeBar" type="range" min="-350" max="350" step="50"  list="tickmarks"/>
+                            <datalist id="tickmarks">
+                                <option value="-350" label="12:00">-350</option>
+                                <option value="-300">-300</option>
+                                <option value="-250">-250</option>
+                                <option value="-200">-200</option>
+                                <option value="-150">-150</option>
+                                <option value="-100">-100</option>
+                                <option value="-50">-50</option>
+                                <option value="0">0</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="150">150</option>
+                                <option value="200">200</option>
+                                <option value="250">250</option>
+                                <option value="300">300</option>
+                                <option value="350" label="19:00">350</option>
+                              </datalist>
+                            <!-- <button id="buttonShow" type="button" style="margin:10px;">Построить</button> -->
+                            <input id="buttonShow" type="submit" value="Построить">
+                    </div>
+            </form>  
+            <h3>Результаты:</h3>
+            <div class="elem-info">
+                <label for="a1">Угол падения (a): </label>
+                <input type="text" id="a1"/>
+        </div>
+        <div class="elem-info">
+            <label for="b1">Угол преломления (b): </label>
+            <input type="text" id="b1"/>
+        </div>            
+        </div>
+        <div id="map">      
+        </div>
+        <canvas id="canvas2d"></canvas>
+        <!-- <div class="info">
+            
+                
+        </div> -->
+        </div>
+    </div>
+    
+    <!-- <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script> -->
+    <script src= "./dist/bundle.js" ></script>
+</body>
+</html>
