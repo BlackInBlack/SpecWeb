@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+</head>
+<body onload="myFunc()">
+    <header>
+        <h1>Linzer - сайт с линзами именно для тебя!</h1><div class="header-contacts">+7 (999) 705-91-54</div>
+    </header>
+    <nav>
+        <div class="nav-item">Главная</div>
+        <div class="nav-item">Линзы</div>
+        <div class="nav-item">Очки</div>
+        <div class="nav-item">Контакты</div>
+        <div class="nav-item">О нас</div>
+        <div class="nav-item">Помощь</div>
+    </nav>
+    <main>
+        <div class="filter">
+            <p>Фильтр:</p>
+            <ul class="types"  type="none">
+                <li><input id="linse" type="checkbox" checked value="linse" onclick="return filter(this.id,this.checked)"><label for="linse">Линзы</label></li>
+                <li><input id="glasses" type="checkbox" checked value="glasses" onclick="return filter(this.id,this.checked)"><label for="glasses">Очки</label></li>
+                <li><input id="means" type="checkbox" checked value="means" onclick="return filter(this.id,this.checked)"><label for="means">Средства по уходу</label></li>
+                <li><input id="eyedrops" type="checkbox" checked value="eyedrops" onclick="return filter(this.id,this.checked)"><label for="eyedrops">Капли</label></li>
+                <li><input id="fluids" type="checkbox" checked value="fluids" onclick="return filter(this.id,this.checked)"><label for="fluids">Растворы</label></li>
+                <li><input id="accessories" type="checkbox" checked value="accessories" onclick="return filter(this.id,this.checked)"><label for="accessories">Акксесуары</label></li>
+            </ul>
+        </div>
+        <div class="goods">
+            <!-- ЛИНЗЫ -->
+            <div class="good linse" data-type="linse">
+                <p class="good-name">Линзы Акувью</p>
+                <img src="img/lenses1.png" class="good-img" alt="Линзы Акувью">
+                <p class="good-cost">Цена: <label>570 руб.</label></p>
+                <label for="buy">решил купить?)</label>
+                <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good linse" data-type="linse">
+                <p class="good-name">Линзы Акувью</p>
+                <img src="img/lenses2.png" class="good-img" alt="Линзы Акувью">
+                <p class="good-cost">Цена: <label>240 руб.</label></p>
+                <label for="buy">решил купить?)</label>
+                <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good linse" data-type="linse">
+                <p class="good-name">Линзы Акувью</p>
+                <img src="img/lenses3.png" class="good-img" alt="Линзы Акувью">
+                <p class="good-cost">Цена: <label>510 руб.</label></p>
+                <label for="buy">решил купить?)</label>
+                <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good linse" data-type="linse">
+                <p class="good-name">Линзы Акувью</p>
+                <img src="img/lenses4.png" class="good-img" alt="Линзы Акувью">
+                <p class="good-cost">Цена: <label>400 руб.</label></p>
+                <label for="buy">решил купить?)</label>
+                <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <!-- ОЧКИ -->
+            <div class="good glasses" data-type="glasses">
+                <p class="good-name">Лучшие очки</p>
+                <img src="img/glasses1.png" class="good-img" alt="Лучшие очки">
+                <p class="good-cost">Цена: <label>2500 руб.</label></p>
+                <label for="buy">решил купить?)</label>
+                <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good glasses" data-type="glasses">
+                    <p class="good-name">Неочень очки</p>
+                    <img src="img/glasses2.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>1720 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good glasses" data-type="glasses">
+                    <p class="good-name">ОГО очки</p>
+                    <img src="img/glasses3.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>7777 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good glasses" data-type="glasses">
+                    <p class="good-name">хмммм</p>
+                    <img src="img/glasses4.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>1 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <!-- КАПЛИ -->
+            <div class="good eyedrops" data-type="eyedrops">
+                    <p class="good-name">Капли 1</p>
+                    <img src="img/eyedrops1.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good eyedrops" data-type="eyedrops">
+                    <p class="good-name">Капли 2</p>
+                    <img src="img/eyedrops2.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good eyedrops" data-type="eyedrops">
+                    <p class="good-name">Капли 3</p>
+                    <img src="img/eyedrops3.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <!-- ЖИДКОСТИ -->
+            <div class="good fluids" data-type="fliuds">
+                    <p class="good-name">Жидкость 1</p>
+                    <img src="img/fluid1.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good fluids" data-type="fliuds">
+                    <p class="good-name">Жидкость 2</p>
+                    <img src="img/fluid2.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+            <div class="good fluids" data-type="fliuds">
+                    <p class="good-name">Жидкость 3</p>
+                    <img src="img/fluid3.png" class="good-img" alt="Лучшие очки">
+                    <p class="good-cost">Цена: <label>12 руб.</label></p>
+                    <label for="buy">решил купить?)</label>
+                    <button class="buy-btn">Да! Купить! <img src="img/buy_button.png" alt="buy icon"></button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+
+        
+    </footer>
+
+    
+</body>
+
+</html>
